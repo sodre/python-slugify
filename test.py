@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+import subprocess
 from slugify import slugify
 from slugify import smart_truncate
 
@@ -208,6 +209,13 @@ class TestUtils(unittest.TestCase):
     def test_smart_truncate_no_seperator(self):
         txt = '1,000 reasons you are #1'
         r = smart_truncate(txt, max_length=100, separator='_')
+        self.assertEqual(r, txt)
+
+class TestUtils(unittest.TestCase):
+
+    def test_launch_cl(self):
+        txt = '404'
+	r = check_output(["slugify", "404"])
         self.assertEqual(r, txt)
 
 if __name__ == '__main__':
