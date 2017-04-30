@@ -1,4 +1,5 @@
 from .slugify import *
+from .slugify import main
 
 
 __author__ = 'Val Neekman @ Neekware Inc. [@vneekman]'

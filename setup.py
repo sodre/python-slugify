@@ -66,5 +66,5 @@ setup(
     packages=find_packages(exclude=EXCLUDE_FROM_PACKAGES),
     install_requires=install_requires,
     classifiers=classifiers,
-    entry_points={'console_scripts': ['slugify=slugify.slugify:main']},
+    entry_points={'console_scripts': ['slugify=slugify:main']},
 )

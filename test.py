@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-import subprocess
+from subprocess import check_output
 from slugify import slugify
 from slugify import smart_truncate
 
@@ -213,10 +213,10 @@ class TestUtils(unittest.TestCase):
 
 class TestUtils(unittest.TestCase):
 
-    def test_launch_cl(self):
+    def test_launch_cli(self):
         txt = '404'
 	r = check_output(["slugify", "404"])
-        self.assertEqual(r, txt)
+        self.assertEqual(r.strip(), txt)
 
 if __name__ == '__main__':
     unittest.main()
